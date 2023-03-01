@@ -16,7 +16,7 @@ abstract class AppPages {
       page: () => const HistoryPage(),
     ),
     GetPage(
-      name: '${Routes.historyDetail}/:id/:name?', //dynamic root
+      name: '${Routes.historyDetail}/:id/:name?', //dynamic route
       page: () => const HistoryDetail(),
     ),
     GetPage(

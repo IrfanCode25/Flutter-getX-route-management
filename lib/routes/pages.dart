@@ -1,3 +1,4 @@
+import 'package:flutter_getx_route_management/pages/history_detail.dart';
 import 'package:flutter_getx_route_management/pages/history_page.dart';
 import 'package:flutter_getx_route_management/pages/home_page.dart';
 import 'package:flutter_getx_route_management/pages/profile.dart';
@@ -13,6 +14,10 @@ abstract class AppPages {
     GetPage(
       name: Routes.history,
       page: () => const HistoryPage(),
+    ),
+    GetPage(
+      name: '${Routes.historyDetail}/:id/:name?', //dynamic root
+      page: () => const HistoryDetail(),
     ),
     GetPage(
       name: Routes.profile,

@@ -13,11 +13,32 @@ class HistoryPage extends StatelessWidget {
         title: const Text('history'),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Get.toNamed(Routes.profile);
-          },
-          child: const Text('profile'),
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(Routes.profile);
+              },
+              child: const Text('profile'),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(
+                    '${Routes.historyDetail}/1/shopping?item=sepatu vans&amount=100000');
+              },
+              child: const Text('history ID 1 (with params)'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(
+                    '${Routes.historyDetail}/2/donation?item=bencana alam&amount=250000');
+              },
+              child: const Text('history ID 2 (with params)'),
+            ),
+          ],
         ),
       ),
     );
